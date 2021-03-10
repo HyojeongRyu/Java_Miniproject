@@ -30,14 +30,16 @@ public class Move2_main {
             int x_next = rd.nextInt(3) - 1;
             int y_next = rd.nextInt(3) - 1;
 
+            map[x][y]++;    //After passing, the place++
             x += x_next;
             y += y_next;
+
             if (map[x][y] == -1) {  //bug bump! goes back to the prev
                 x = prev_x;
                 y = prev_y;
-            } else {
-                map[x][y]++;   //After passing, the place++
+                continue;
             }
+
             for (int i = 0; i < map.length; i++) {  //check the number of places the bug has not been
                 for (int j = 0; j < map[i].length; j++) {
                     if (map[i][j] == 0) {
