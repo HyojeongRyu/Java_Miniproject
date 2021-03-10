@@ -2,7 +2,7 @@ package BugMove1;
 
 import java.util.Random;
 
-public class Move1_Main {
+public class Move1_main {
     public static void main(String[] args) {
         int n = 4;   //row of map
         int m = 4;    //col of map
@@ -20,22 +20,22 @@ public class Move1_Main {
             int check = 0; //The number of places bug has been
             map[y][x]++;    //bug starts at center of the map
 
-            if (x == 0 || y == 0 || x == n - 1 || y == m - 1) { //wall
+            if (x == 0 || y == 0 || x == n - 1 || y == m - 1) { //corner
                 if (x == 0) {
-                    int wall = rd.nextInt(2);
-                    x += wall;
+                    int corner = rd.nextInt(2);
+                    x += corner;
                 }
                 if (y == 0) {
-                    int wall = rd.nextInt(2);
-                    y += wall;
+                    int corner = rd.nextInt(2);
+                    y += corner;
                 }
                 if (x == n - 1) {
-                    int wall = rd.nextInt(2) - 1;
-                    x += wall;
+                    int corner = rd.nextInt(2) - 1;
+                    x += corner;
                 }
                 if (y == m - 1) {
-                    int wall = rd.nextInt(2) - 1;
-                    y += wall;
+                    int corner = rd.nextInt(2) - 1;
+                    y += corner;
                 }
             } else {
                 int x_next = rd.nextInt(3) - 1;
